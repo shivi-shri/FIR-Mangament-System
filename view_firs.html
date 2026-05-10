@@ -1,0 +1,14 @@
+<h2>All FIRs</h2>
+<table border="1">
+    <tr><th>ID</th><th>Citizen</th><th>Officer</th><th>Date</th><th>Status</th><th>Description</th></tr>
+    {% for fir in firs %}
+    <tr>
+        <td>{{ fir.fir_id }}</td>
+        <td>{{ fir.citizen_name }}</td>
+        <td>{{ fir.officer_name }}</td>
+        <td>{{ fir.date_filed }}</td>
+        <td>{{ fir.status }}</td>
+        <td>{{ fir.description }}</td>
+    </tr>
+    {% endfor %}
+</table>

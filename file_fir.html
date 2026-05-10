@@ -1,0 +1,17 @@
+<form method="POST">
+    Citizen ID: <input type="text" name="citizen_id" required><br>
+    <label>Station:</label>
+    <select name="station_id">
+        {% for station in stations %}
+        <option value="{{ station.station_id }}">{{ station.station_name }}</option>
+        {% endfor %}
+    </select><br>
+    <label>Officer:</label>
+    <select name="officer_id">
+        {% for officer in officers %}
+        <option value="{{ officer.officer_id }}">{{ officer.name }}</option>
+        {% endfor %}
+    </select><br>
+    <textarea name="description" placeholder="Describe the incident..." required></textarea><br>
+    <button type="submit">File FIR</button>
+</form>
